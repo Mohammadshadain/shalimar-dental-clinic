@@ -873,7 +873,7 @@ const Blog = () => {
 };
 
 const Footer = () => (
-  <footer className="w-full bg-surface-container-low pt-16 sm:pt-24 pb-24 sm:pb-32 px-4 md:px-6 relative overflow-hidden" id="contact">
+  <footer className="w-full bg-surface-container-low pt-16 sm:pt-24 pb-24 md:pb-12 px-4 md:px-6 relative overflow-hidden" id="contact">
     <div className="max-w-7xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 items-start mb-16">
         <div className="text-center md:text-left">

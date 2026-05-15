@@ -1,20 +1,26 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Shalimar Dental Clinic Website
 
-# Run and deploy your AI Studio app
+Professional dental clinic website developed for client business growth, online presence, and local SEO optimization.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/9fab49d0-85ed-482d-b14a-fc7d326fe36f
+- Modern Responsive UI
+- SEO Optimized Structure
+- Fast Loading Performance
+- Appointment Booking Section
+- Services Pages
+- FAQ Section
+- Blog Section
+- Mobile Friendly Design
+- Google Search Ready
 
-## Run Locally
+## Technologies Used
 
-**Prerequisites:**  Node.js
+- React
+- Vite
+- TypeScript
+- Tailwind CSS
 
+## Website
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+https://shalimardentalclinic.online
