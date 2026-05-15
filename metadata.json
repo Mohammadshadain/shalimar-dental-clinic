@@ -1,0 +1,7 @@
+{
+  "name": "Shalimar Dental Clinic",
+  "description": "Premium dental care in Lucknow. Expert dentists offering Root Canal, Implants, and Braces in a modern, painless clinical sanctuary.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
