@@ -1,12 +1,17 @@
 import { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-import { 
-  Navbar, 
-  Footer, 
-  MobileNav, 
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+
+import {
+  Navbar,
+  Footer,
+  MobileNav,
   WhatsAppButton,
-  RegistrationModal
+  RegistrationModal,
 } from "./components/ClinicApp";
 
 // Import Pages
@@ -48,9 +53,11 @@ import ChildFirstVisit from "./pages/blog/ChildFirstVisit";
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return null;
 };
 
@@ -58,56 +65,155 @@ export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <HelmetProvider>
-      <Router>
-        <ScrollToTop />
-        <div className="min-h-screen bg-surface overflow-x-hidden flex flex-col">
-          <Navbar />
-          <main className="flex-grow">
-            <Routes>
-              {/* Main Pages */}
-              <Route path="/" element={<HomePage onOpenModal={() => setIsModalOpen(true)} />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/faq" element={<FAQPage />} />
-              <Route path="/team" element={<TeamPageRoute />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/appointment" element={<AppointmentPage />} />
+    <Router>
+      <ScrollToTop />
 
-              {/* Service Sub-pages */}
-              <Route path="/root-canal-treatment-lucknow" element={<RootCanalLucknow />} />
-              <Route path="/dental-implant-lucknow" element={<DentalImplantLucknow />} />
-              <Route path="/teeth-cleaning-lucknow" element={<TeethCleaningLucknow />} />
-              <Route path="/tooth-extraction-lucknow" element={<ToothExtractionLucknow />} />
-              <Route path="/braces-treatment-lucknow" element={<BracesTreatmentLucknow />} />
-              <Route path="/kids-dentistry-lucknow" element={<KidsDentistryLucknow />} />
-              <Route path="/smile-makeover-lucknow" element={<SmileMakeoverLucknow />} />
-              <Route path="/gum-treatment-lucknow" element={<GumTreatmentLucknow />} />
-              <Route path="/dental-x-ray-lucknow" element={<DentalXRayLucknow />} />
-              <Route path="/oral-surgery-lucknow" element={<OralSurgeryLucknow />} />
-              <Route path="/consultation-lucknow" element={<ConsultationLucknow />} />
-              <Route path="/cosmetic-dentistry-lucknow" element={<CosmeticDentistryLucknow />} />
-              <Route path="/dentures-lucknow" element={<DenturesLucknow />} />
-              <Route path="/wisdom-tooth-removal-lucknow" element={<WisdomToothRemovalLucknow />} />
-              <Route path="/dental-crowns-lucknow" element={<DentalCrownsLucknow />} />
+      <div className="min-h-screen bg-surface overflow-x-hidden flex flex-col">
+        <Navbar />
 
-              {/* Blog Sub-pages */}
-              <Route path="/blog/root-canal-cost-lucknow" element={<RootCanalCostLucknow />} />
-              <Route path="/blog/how-to-stop-tooth-pain-immediately" element={<HowToStopToothPain />} />
-              <Route path="/blog/dental-implant-vs-bridge" element={<ImplantVsBridge />} />
-              <Route path="/blog/benefits-of-teeth-cleaning" element={<BenefitsOfCleaning />} />
-              <Route path="/blog/wisdom-tooth-extraction-recovery" element={<WisdomToothRecovery />} />
-              <Route path="/blog/types-of-braces-cost-lucknow" element={<TypesOfBracesCost />} />
-              <Route path="/blog/how-to-choose-best-dentist" element={<HowToChooseDentist />} />
-              <Route path="/blog/child-first-dental-visit" element={<ChildFirstVisit />} />
-            </Routes>
-          </main>
-          <Footer />
-          <MobileNav />
-          <WhatsAppButton />
-          <RegistrationModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-        </div>
-      </Router>
-    </HelmetProvider>
+        <main className="flex-grow">
+          <Routes>
+            {/* Main Pages */}
+            <Route
+              path="/"
+              element={<HomePage onOpenModal={() => setIsModalOpen(true)} />}
+            />
+
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/blog" element={<BlogPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            <Route path="/team" element={<TeamPageRoute />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/appointment" element={<AppointmentPage />} />
+
+            {/* Service Sub-pages */}
+            <Route
+              path="/root-canal-treatment-lucknow"
+              element={<RootCanalLucknow />}
+            />
+
+            <Route
+              path="/dental-implant-lucknow"
+              element={<DentalImplantLucknow />}
+            />
+
+            <Route
+              path="/teeth-cleaning-lucknow"
+              element={<TeethCleaningLucknow />}
+            />
+
+            <Route
+              path="/tooth-extraction-lucknow"
+              element={<ToothExtractionLucknow />}
+            />
+
+            <Route
+              path="/braces-treatment-lucknow"
+              element={<BracesTreatmentLucknow />}
+            />
+
+            <Route
+              path="/kids-dentistry-lucknow"
+              element={<KidsDentistryLucknow />}
+            />
+
+            <Route
+              path="/smile-makeover-lucknow"
+              element={<SmileMakeoverLucknow />}
+            />
+
+            <Route
+              path="/gum-treatment-lucknow"
+              element={<GumTreatmentLucknow />}
+            />
+
+            <Route
+              path="/dental-x-ray-lucknow"
+              element={<DentalXRayLucknow />}
+            />
+
+            <Route
+              path="/oral-surgery-lucknow"
+              element={<OralSurgeryLucknow />}
+            />
+
+            <Route
+              path="/consultation-lucknow"
+              element={<ConsultationLucknow />}
+            />
+
+            <Route
+              path="/cosmetic-dentistry-lucknow"
+              element={<CosmeticDentistryLucknow />}
+            />
+
+            <Route
+              path="/dentures-lucknow"
+              element={<DenturesLucknow />}
+            />
+
+            <Route
+              path="/wisdom-tooth-removal-lucknow"
+              element={<WisdomToothRemovalLucknow />}
+            />
+
+            <Route
+              path="/dental-crowns-lucknow"
+              element={<DentalCrownsLucknow />}
+            />
+
+            {/* Blog Sub-pages */}
+            <Route
+              path="/blog/root-canal-cost-lucknow"
+              element={<RootCanalCostLucknow />}
+            />
+
+            <Route
+              path="/blog/how-to-stop-tooth-pain-immediately"
+              element={<HowToStopToothPain />}
+            />
+
+            <Route
+              path="/blog/dental-implant-vs-bridge"
+              element={<ImplantVsBridge />}
+            />
+
+            <Route
+              path="/blog/benefits-of-teeth-cleaning"
+              element={<BenefitsOfCleaning />}
+            />
+
+            <Route
+              path="/blog/wisdom-tooth-extraction-recovery"
+              element={<WisdomToothRecovery />}
+            />
+
+            <Route
+              path="/blog/types-of-braces-cost-lucknow"
+              element={<TypesOfBracesCost />}
+            />
+
+            <Route
+              path="/blog/how-to-choose-best-dentist"
+              element={<HowToChooseDentist />}
+            />
+
+            <Route
+              path="/blog/child-first-dental-visit"
+              element={<ChildFirstVisit />}
+            />
+          </Routes>
+        </main>
+
+        <Footer />
+        <MobileNav />
+        <WhatsAppButton />
+
+        <RegistrationModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
+      </div>
+    </Router>
   );
 }
