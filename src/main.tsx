@@ -1,15 +1,18 @@
-import React, { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
+import ReactGA from "react-ga4";
 
-import App from "./App.tsx";
-// @ts-ignore: allow importing global CSS without type declarations
+import App from "./App";
+// @ts-ignore: CSS module declaration missing for side-effect import
 import "./index.css";
 
-createRoot(document.getElementById("root")!).render(
-  <StrictMode>
+ReactGA.initialize("G-06Y0DS8J4H");
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
     <HelmetProvider>
       <App />
     </HelmetProvider>
-  </StrictMode>
+  </React.StrictMode>
 );
