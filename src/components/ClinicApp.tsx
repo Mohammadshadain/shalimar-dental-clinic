@@ -210,16 +210,12 @@ const Hero = () => (
         className="w-full lg:w-1/2 relative"
       >
         <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
-         <img
-  src="/main1.webp"
-  alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow"
-  className="w-full h-full object-cover"
-  width="1448"
-  height="1086"
-  fetchPriority="high"
-  decoding="async"
-  referrerPolicy="no-referrer"
-/>
+          <img 
+            alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
+            className="w-full h-full object-cover" 
+            src="/main1.webp"
+            referrerPolicy="no-referrer"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
         </div>
         <div className="absolute -bottom-6 sm:-bottom-16 -left-4 sm:-left-6 bg-white/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl max-w-[240px] sm:max-w-xs z-20">
