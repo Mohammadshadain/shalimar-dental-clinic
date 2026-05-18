@@ -16,8 +16,8 @@
   --color-surface-container-low: #f2f4f6;
   --color-surface-container-lowest: #ffffff;
   
-  --color-on-surface: #191c1e;
-  --color-on-surface-variant: #353b47;
+  --color-on-surface: #000000;
+  --color-on-surface-variant: #1f232b;
   
   --radius-md: 0.75rem;
   --radius-lg: 1rem;

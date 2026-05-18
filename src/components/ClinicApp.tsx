@@ -68,7 +68,7 @@ const Navbar = () => {
           </div>
           <div className="flex flex-col">
             <span className="text-xl font-bold text-primary tracking-tighter font-headline leading-none">Shalimar Dental</span>
-            <span className="text-[10px] uppercase tracking-[0.2em] text-secondary font-black opacity-80 mt-1">Clinical Excellence</span>
+            <span className="text-[10px] uppercase tracking-[0.2em] text-secondary font-black mt-1">Clinical Excellence</span>
           </div>
         </Link>
         
@@ -215,22 +215,22 @@ const Hero = () => (
             className="w-full h-full object-cover" 
             src="main1.webp"
             referrerPolicy="no-referrer"
-            width="800"
-            height="600"
+            width="600"
+            height="450"
             fetchPriority="high"
             loading="eager"
             decoding="sync"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
         </div>
-        <div className="absolute -bottom-6 sm:-bottom-16 -left-4 sm:-left-6 bg-white/90 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl max-w-[240px] sm:max-w-xs z-20">
+        <div className="absolute -bottom-6 sm:-bottom-16 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl max-w-[240px] sm:max-w-xs z-20">
           <div className="flex items-center gap-3 mb-2 sm:mb-3">
-            <div className="p-2 bg-tertiary-container/10 rounded-lg">
+            <div className="p-2 bg-tertiary-container/30 rounded-lg">
               <BadgeCheck className="text-tertiary w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h3 className="font-bold text-primary text-sm sm:text-base">Expert Care</h3>
+            <div className="font-black text-primary text-sm sm:text-base">Expert Care</div>
           </div>
-          <p className="text-xs sm:text-sm text-on-surface-variant font-medium">Advanced treatments like root canal and implants by our expert clinical team.</p>
+          <p className="text-xs sm:text-sm text-on-surface font-bold">Advanced treatments like root canal and implants by our expert clinical team.</p>
         </div>
       </motion.div>
     </div>
@@ -242,7 +242,7 @@ const About = () => (
     <div className="max-w-7xl mx-auto px-4 md:px-6">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         <div className="text-center lg:text-left">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary/10 text-secondary text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary text-white text-[10px] sm:text-xs font-black tracking-widest uppercase mb-6 shadow-sm">
             Clinical Excellence
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-[2.5rem] font-bold font-headline text-primary mb-6 leading-tight">Painless and affordable care for every smile.</h2>
@@ -568,20 +568,22 @@ const Testimonials = () => {
                   </div>
                 </div>
                 <div className="p-6 sm:p-8">
-                  <h4 className="font-bold text-primary text-lg sm:text-xl mb-2">{results[currentIndex].category}</h4>
-                  <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed font-medium">{results[currentIndex].desc}</p>
+                  <h3 className="font-bold text-primary text-lg sm:text-xl mb-2">{results[currentIndex].category}</h3>
+                  <p className="text-sm sm:text-base text-on-surface leading-relaxed font-bold">{results[currentIndex].desc}</p>
                 </div>
               </motion.div>
             </div>
             
-            <div className="flex justify-center gap-2 mt-8">
+            <div className="flex justify-center gap-1 mt-8">
               {results.map((_, i) => (
                 <button 
                   key={i}
                   onClick={() => setCurrentIndex(i)}
-                  className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 ${currentIndex === i ? "w-8 bg-primary" : "w-2 bg-surface-container hover:bg-primary/30"}`}
+                  className="group p-3 cursor-pointer"
                   aria-label={`Go to slide ${i + 1}`}
-                />
+                >
+                  <div className={`h-2 rounded-full transition-all duration-300 ${currentIndex === i ? "w-8 bg-primary" : "w-2 bg-surface-container group-hover:bg-primary/30"}`} />
+                </button>
               ))}
             </div>
           </div>
@@ -908,7 +910,7 @@ const Footer = () => (
               <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" /> 9598112677
             </a>
             <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-on-surface-variant font-bold">
-              <Clock className="w-4 h-4 text-secondary" /> <span>11:00 AM — 05:00 PM <span className="text-red-500 font-black ml-1">(Fri Closed)</span></span>
+              <Clock className="w-5 h-5 text-secondary" /> <span className="text-on-surface font-bold">11:00 AM — 05:00 PM <span className="text-red-700 font-black ml-1">(Fri Closed)</span></span>
             </div>
           </div>
         </div>
@@ -932,16 +934,14 @@ const Footer = () => (
                 decoding="async"
               />
             </div>
-            <div className="flex-1">
-              <p className="font-black text-primary text-base sm:text-lg mb-2 group-hover:text-secondary transition-colors">Shalimar Dental Clinic Lucknow</p>
-              <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed font-bold">
-                Near Dubagga Chauraha, Hardoi Rd, Lucknow, Uttar Pradesh 226003. <span className="text-primary/60">Expert dentists near Hardoi road and Dubagga.</span>
+              <h3 className="font-black text-primary text-base sm:text-lg mb-2 group-hover:text-secondary transition-colors">Shalimar Dental Clinic Lucknow</h3>
+              <p className="text-xs sm:text-sm text-on-surface leading-relaxed font-bold">
+                Near Dubagga Chauraha, Hardoi Rd, Lucknow, Uttar Pradesh 226003. <span className="text-primary font-extrabold underline decoration-2 decoration-secondary/30">Expert dentists near Hardoi road and Dubagga.</span>
               </p>
               <div className="flex items-center gap-2 mt-4">
-                <span className="text-[10px] sm:text-xs text-secondary font-black uppercase tracking-widest bg-secondary/5 px-3 py-1 rounded-full">Get Directions</span>
+                <span className="text-[10px] sm:text-xs text-secondary font-black uppercase tracking-widest bg-secondary/10 px-4 py-2 rounded-full border border-secondary/20">Get Directions</span>
                 <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-2 transition-transform" />
               </div>
-            </div>
           </a>
         </div>
       </div>
@@ -988,12 +988,12 @@ const MobileNav = () => {
     <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] z-50 flex justify-between items-center px-2 py-3 bg-white/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,63,135,0.15)] border border-white/50 rounded-[2.5rem]">
       <Link 
         to="/" 
-        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 min-h-[44px] ${location.pathname === "/" ? "text-primary" : "text-on-surface/80 hover:text-primary/60"}`}
+        className={`flex-1 min-h-[44px] flex flex-col items-center justify-center gap-1 transition-all active:scale-90 ${location.pathname === "/" ? "text-primary" : "text-black hover:text-primary"}`}
       >
-        <div className={`p-2 rounded-2xl transition-colors ${location.pathname === "/" ? "bg-primary/5" : ""}`}>
-          <Home className="w-5 h-5" />
+        <div className={`p-2.5 rounded-2xl transition-colors ${location.pathname === "/" ? "bg-primary/5" : ""}`}>
+          <Home className="w-6 h-6" />
         </div>
-        <span className="text-[9px] font-black uppercase tracking-[0.1em]">Home</span>
+        <span className="text-[10px] font-black uppercase tracking-[0.1em]">Home</span>
       </Link>
       
       <div className="px-2">
@@ -1001,10 +1001,10 @@ const MobileNav = () => {
           to="/appointment" 
           className="flex flex-col items-center justify-center -mt-12 group transition-all min-h-[44px]"
         >
-          <div className="bg-primary p-4.5 rounded-full shadow-[0_10px_25px_rgba(0,63,135,0.4)] border-4 border-white group-hover:scale-110 group-active:scale-95 transition-all">
-            <Calendar className="w-6 h-6 text-white" />
+          <div className="bg-primary p-5 rounded-full shadow-[0_10px_25px_rgba(0,63,135,0.4)] border-4 border-white group-hover:scale-110 group-active:scale-95 transition-all">
+            <Calendar className="w-7 h-7 text-white" />
           </div>
-          <span className="text-[10px] font-black text-primary mt-2 uppercase tracking-widest bg-white/80 px-3 py-1 rounded-full border border-primary/5">Book</span>
+          <span className="text-[11px] font-black text-primary mt-2 uppercase tracking-widest bg-white/90 px-4 py-1.5 rounded-full border border-primary/10 shadow-sm">Book</span>
         </Link>
       </div>
  
@@ -1012,12 +1012,12 @@ const MobileNav = () => {
         href="https://www.instagram.com/shalimar_dentalclinic_dubagga?igsh=em0ybnlhemh1d3Rs" 
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 min-h-[44px] text-on-surface/80 hover:text-primary/60`}
+        className={`flex-1 min-h-[44px] flex flex-col items-center justify-center gap-1 transition-all active:scale-90 text-black hover:text-primary`}
       >
-        <div className={`p-2 rounded-2xl transition-colors`}>
-          <Instagram className="w-5 h-5" />
+        <div className={`p-2.5 rounded-2xl transition-colors`}>
+          <Instagram className="w-6 h-6" />
         </div>
-        <span className="text-[9px] font-black uppercase tracking-[0.1em]">Insta</span>
+        <span className="text-[10px] font-black uppercase tracking-[0.1em]">Insta</span>
       </a>
     </nav>
   );
