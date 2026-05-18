@@ -193,10 +193,10 @@ const Hero = () => (
           <div className="flex items-center gap-3">
             <div className="flex -space-x-2">
               <div className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden shadow-sm">
-                <img src="https://picsum.photos/seed/dentist1/100/100" alt="Best Dentist in Lucknow - Dr. Azim Ahmad" referrerPolicy="no-referrer" />
+                <img src="https://picsum.photos/seed/dentist1/100/100" alt="Best Dentist in Lucknow - Dr. Azim Ahmad" referrerPolicy="no-referrer" width="40" height="40" loading="eager" />
               </div>
               <div className="w-10 h-10 rounded-full border-2 border-white bg-slate-300 overflow-hidden shadow-sm">
-                <img src="https://picsum.photos/seed/dentist2/100/100" alt="Top Dental Specialist near Dubagga Lucknow" referrerPolicy="no-referrer" />
+                <img src="https://picsum.photos/seed/dentist2/100/100" alt="Top Dental Specialist near Dubagga Lucknow" referrerPolicy="no-referrer" width="40" height="40" loading="eager" />
               </div>
             </div>
             <span className="text-sm font-bold text-on-surface-variant">Trusted by 5000+ Patients</span>
@@ -213,8 +213,13 @@ const Hero = () => (
           <img 
             alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
             className="w-full h-full object-cover" 
-            src="/main1.webp"
+            src="https://images.unsplash.com/photo-1629909613654-28a3a7c4a45e?auto=format&fit=crop&fm=webp&q=80&w=1200"
             referrerPolicy="no-referrer"
+            width="800"
+            height="600"
+            fetchPriority="high"
+            loading="eager"
+            decoding="sync"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
         </div>
@@ -274,6 +279,10 @@ const About = () => (
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover" 
               src="/sub-main.webp"
               referrerPolicy="no-referrer"
+              width="400"
+              height="533"
+              loading="lazy"
+              decoding="async"
             />
           </div>
           <div className="pb-8 sm:pb-12">
@@ -283,6 +292,10 @@ const About = () => (
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover" 
               src="/sub-main1.webp"
               referrerPolicy="no-referrer"
+              width="400"
+              height="533"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
@@ -546,11 +559,11 @@ const Testimonials = () => {
               >
                 <div className="flex flex-row aspect-[4/3] sm:aspect-video w-full">
                   <div className="relative w-1/2 overflow-hidden">
-                    <img src={results[currentIndex].before} alt={`Before ${results[currentIndex].category} Treatment - Shalimar Dental Clinic Lucknow`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                    <img src={results[currentIndex].before} alt={`Before ${results[currentIndex].category} Treatment - Shalimar Dental Clinic Lucknow`} className="w-full h-full object-cover" referrerPolicy="no-referrer" width="400" height="300" loading="lazy" decoding="async" />
                     <div className="absolute top-2 sm:top-4 left-2 sm:left-4 bg-black/60 backdrop-blur-md text-white text-[8px] sm:text-[10px] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full uppercase tracking-widest">Before</div>
                   </div>
                   <div className="relative w-1/2 overflow-hidden">
-                    <img src={results[currentIndex].after} alt={`After ${results[currentIndex].category} Treatment - Best Dentist in Lucknow Results`} className="w-full h-full object-cover border-l-2 border-white" referrerPolicy="no-referrer" />
+                    <img src={results[currentIndex].after} alt={`After ${results[currentIndex].category} Treatment - Best Dentist in Lucknow Results`} className="w-full h-full object-cover border-l-2 border-white" referrerPolicy="no-referrer" width="400" height="300" loading="lazy" decoding="async" />
                     <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-primary/90 backdrop-blur-md text-white text-[8px] sm:text-[10px] font-bold px-2 sm:px-3 py-1 sm:py-1.5 rounded-full uppercase tracking-widest">After</div>
                   </div>
                 </div>
@@ -854,6 +867,10 @@ const Blog = () => {
                   alt={`${blog.title} - Dental Health Blog Lucknow`} 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
+                  width="400"
+                  height="300"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">
@@ -909,6 +926,10 @@ const Footer = () => (
                 src="https://www.gstatic.com/images/branding/product/2x/maps_96dp.png" 
                 alt="Google Maps" 
                 className="w-10 h-10 object-contain"
+                width="40"
+                height="40"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="flex-1">
@@ -967,7 +988,7 @@ const MobileNav = () => {
     <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] z-50 flex justify-between items-center px-4 py-3 bg-white/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,63,135,0.15)] border border-white/50 rounded-[2.5rem]">
       <Link 
         to="/" 
-        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 ${location.pathname === "/" ? "text-primary" : "text-on-surface-variant/60 hover:text-primary/60"}`}
+        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 ${location.pathname === "/" ? "text-primary" : "text-on-surface/80 hover:text-primary/60"}`}
       >
         <div className={`p-2 rounded-2xl transition-colors ${location.pathname === "/" ? "bg-primary/5" : ""}`}>
           <Home className="w-5 h-5" />
@@ -991,7 +1012,7 @@ const MobileNav = () => {
         href="https://www.instagram.com/shalimar_dentalclinic_dubagga?igsh=em0ybnlhemh1d3Rs" 
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 text-on-surface-variant/60 hover:text-primary/60`}
+        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 text-on-surface/80 hover:text-primary/60`}
       >
         <div className={`p-2 rounded-2xl transition-colors`}>
           <Instagram className="w-5 h-5" />
@@ -1066,7 +1087,7 @@ const TeamPage = () => (
             name: "Dr. Azim Ahmad", 
             role: "Chief Dental Surgeon", 
             degree: "MDS (Oral & Maxillofacial)", 
-            image: "azeem2.webp",
+            image: "/azeem2.webp",
             expertise: "Implants, Trauma",
             focus: "Complex Extractions",
             description: "Chief specialist in Oral & Maxillofacial Surgery, specializing in complex extractions, implants, and corrective jaw surgeries with clinical precision.",
@@ -1076,7 +1097,7 @@ const TeamPage = () => (
             name: "Dr. Mohd Nadeem", 
             role: "Surgery Specialist", 
             degree: "MDS (Oral & Maxillofacial)", 
-            image: "Nadeem.webp",
+            image: "/Nadeem.webp",
             expertise: "Maxillofacial Surgery",
             focus: "Surgical Precision",
             description: "Expert in advanced surgical techniques for dental restoration and facial reconstruction, prioritizing patient safety and optimal clinical outcomes.",
@@ -1086,7 +1107,7 @@ const TeamPage = () => (
             name: "Dr. Shahnawaz Alam", 
             role: "Surgery Specialist", 
             degree: "MDS (Oral & Maxillofacial)", 
-            image: "shanawaz1.webp",
+            image: "/shanawaz1.webp",
             expertise: "Oral Surgery, Trauma",
             focus: "Specialist Surgeon",
             description: "Dedicated to high-quality surgical care, from routine extractions to complex reconstructive procedures with a patient-centered approach.",
@@ -1096,7 +1117,7 @@ const TeamPage = () => (
             name: "Dr. Mohammad Aamir Khan", 
             role: "Dental Surgeon", 
             degree: "General Dentistry", 
-            image: "amir.webp",
+            image: "/amir.webp",
             expertise: "General Care, Scaling",
             focus: "Patient Wellness",
             description: "Specializing in comprehensive general dentistry and preventive care, ensuring long-term oral health for all patients in Dubagga.",
@@ -1117,6 +1138,10 @@ const TeamPage = () => (
                 alt={doctor.name} 
                 className="w-full aspect-[4/3] object-cover rounded-3xl shadow-xl lg:shadow-2xl border-4 border-white"
                 referrerPolicy="no-referrer"
+                width="600"
+                height="450"
+                loading="lazy"
+                decoding="async"
               />
               <div className={`absolute -bottom-6 ${index % 2 === 0 ? 'right-10' : 'left-10'} bg-white p-4 rounded-2xl shadow-lg hidden sm:block`}>
                 <div className="flex items-center gap-2 text-primary">
@@ -1137,11 +1162,11 @@ const TeamPage = () => (
                 </p>
                 <div className="grid grid-cols-2 gap-4 w-full max-w-sm sm:max-w-md mx-auto lg:mx-0">
                   <div className="p-4 sm:p-5 bg-white border border-surface-container rounded-2xl shadow-sm">
-                    <h5 className="font-bold text-primary text-xs sm:text-sm mb-2">Expertise</h5>
+                    <h4 className="font-bold text-primary text-xs sm:text-sm mb-2">Expertise</h4>
                     <p className="text-xs text-on-surface-variant font-medium">{doctor.expertise}</p>
                   </div>
                   <div className="p-4 sm:p-5 bg-white border border-surface-container rounded-2xl shadow-sm">
-                    <h5 className="font-bold text-primary text-xs sm:text-sm mb-2">Focus</h5>
+                    <h4 className="font-bold text-primary text-xs sm:text-sm mb-2">Focus</h4>
                     <p className="text-xs text-on-surface-variant font-medium">{doctor.focus}</p>
                   </div>
                 </div>
