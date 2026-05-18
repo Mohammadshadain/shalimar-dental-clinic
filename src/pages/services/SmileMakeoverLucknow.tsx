@@ -8,7 +8,7 @@ const SmileMakeoverLucknow = () => {
       seoTitle="Professional Smile Makeover in Lucknow | Cosmetic Dentistry"
       seoDescription="Transform your smile with a professional smile makeover in Lucknow at Shalimar Dental Clinic. Veneers, whitening, and aesthetic dentistry for a perfect smile."
       path="/smile-makeover-lucknow"
-      image="/smile-after.png"
+      image="/smile-after.webp"
       benefits={[
         "Completely transforms your facial appearance",
         "Corrects tooth discoloration and yellowing",

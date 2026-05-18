@@ -8,7 +8,7 @@ const RootCanalCostLucknow = () => {
       seoTitle="Root Canal Treatment Cost in Lucknow | RCT Charges 2024"
       seoDescription="Wondering about root canal treatment cost in Lucknow? Learn about RCT charges, factors affecting price, and why Shalimar Dental offers the best value for painless RCT."
       path="/blog/root-canal-cost-lucknow"
-      image="/rct-after.png"
+      image="/rct-after.webp"
       date="May 10, 2024"
       author="Dr. Azim Ahmad"
       readTime="5 min read"

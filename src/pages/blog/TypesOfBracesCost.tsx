@@ -8,7 +8,7 @@ const TypesOfBracesCost = () => {
       seoTitle="Cost of Braces in Lucknow | Metal, Ceramic & Invisible Aligners"
       seoDescription="Thinking about getting braces? Learn about the different types of orthodontic treatments and the cost of braces in Lucknow for your perfect smile transformation."
       path="/blog/types-of-braces-cost-lucknow"
-      image="/braces-after.png"
+      image="/braces-after.webp"
       date="May 20, 2024"
       author="Dr. Azim Ahmad"
       readTime="7 min read"

@@ -8,7 +8,7 @@ const OralSurgeryLucknow = () => {
       seoTitle="Advanced Oral Surgery in Lucknow | Expert Surgeons | Shalimar Dental"
       seoDescription="Safe and painless oral surgery in Lucknow at Shalimar Dental Clinic. Specializing in wisdom tooth removal, bone grafting, and complex extractions."
       path="/oral-surgery-lucknow"
-      image="/cost222.png"
+      image="/cost222.webp"
       benefits={[
         "Expert Oral & Maxillofacial Surgeons",
         "Minimally invasive techniques",

@@ -8,7 +8,7 @@ const WisdomToothRemovalLucknow = () => {
       seoTitle="Wisdom Tooth Extraction Lucknow | Painless Removal | Shalimar Dental"
       seoDescription="Safe and painless wisdom tooth removal in Lucknow at Shalimar Dental Clinic. Expert surgical extractions for impacted molars near Dubagga and Hardoi Road."
       path="/wisdom-tooth-removal-lucknow"
-      image="/cost77.png"
+      image="/cost77.webp"
       benefits={[
         "Expert surgical extraction",
         "Painless localized anesthesia",

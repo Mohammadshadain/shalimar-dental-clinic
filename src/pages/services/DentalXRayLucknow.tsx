@@ -8,7 +8,7 @@ const DentalXRayLucknow = () => {
       seoTitle="Digital Dental X-Ray in Lucknow | Advanced Diagnostics | Shalimar Dental"
       seoDescription="Get high-definition digital dental X-rays in Lucknow at Shalimar Dental Clinic. Precise diagnostics for painless and accurate dental treatments near Dubagga."
       path="/dental-x-ray-lucknow"
-      image="/cost1111.png"
+      image="/cost1111.webp"
       benefits={[
         "High-definition digital imaging",
         "Low radiation exposure",

@@ -8,7 +8,7 @@ const DenturesLucknow = () => {
       seoTitle="Custom Dentures Lucknow | Removable Teeth Replacement | Shalimar Dental"
       seoDescription="Get comfortable and natural-looking dentures in Lucknow at Shalimar Dental Clinic. Affordable solutions for partial and full tooth replacement near Dubagga."
       path="/dentures-lucknow"
-      image="/cost5.png"
+      image="/cost5.webp"
       benefits={[
         "Custom-fit for maximum comfort",
         "Natural-looking appearance",

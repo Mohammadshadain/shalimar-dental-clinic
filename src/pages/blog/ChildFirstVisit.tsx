@@ -8,7 +8,7 @@ const ChildFirstVisit = () => {
       seoTitle="Child's First Dental Visit Guide | Pediatric Dentistry Lucknow"
       seoDescription="The first dental visit is a big milestone! Learn how to prepare your child for a happy, fear-free first dental checkup at Shalimar Dental Clinic Lucknow."
       path="/blog/child-first-dental-visit"
-      image="/main1.png"
+      image="/main1.webp"
       date="May 24, 2024"
       author="Dr. Azim Ahmad"
       readTime="4 min read"

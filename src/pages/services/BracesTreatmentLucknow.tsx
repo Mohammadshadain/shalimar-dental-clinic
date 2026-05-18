@@ -8,7 +8,7 @@ const BracesTreatmentLucknow = () => {
       seoTitle="Best Braces & Aligners in Lucknow | Orthodontic Treatment"
       seoDescription="Achieve a perfect smile with braces and clear aligners in Lucknow at Shalimar Dental Clinic. Affordable orthodontic care for kids and adults near Dubagga."
       path="/braces-treatment-lucknow"
-      image="/braces-after.png"
+      image="/braces-after.webp"
       benefits={[
         "Perfectly aligns crooked or crowded teeth",
         "Fixes overbites, underbites, and gaps",

@@ -8,7 +8,7 @@ const TeethCleaningLucknow = () => {
       seoTitle="Professional Teeth Cleaning in Lucknow | Scaling & Polishing"
       seoDescription="Book professional teeth cleaning and scaling in Lucknow at Shalimar Dental Clinic. Remove plaque, tartar, and stains for a healthier, brighter smile today."
       path="/teeth-cleaning-lucknow"
-      image="/cleaning-after.png"
+      image="/cleaning-after.webp"
       benefits={[
         "Removes stubborn plaque and tartar",
         "Prevents gum disease and gingivitis",

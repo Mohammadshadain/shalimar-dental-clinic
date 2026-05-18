@@ -8,7 +8,7 @@ const ConsultationLucknow = () => {
       seoTitle="Dental Consultation Lucknow | Personalized Dental Checkup | Shalimar Dental"
       seoDescription="Book a professional dental consultation in Lucknow at Shalimar Dental Clinic. Get personalized treatment plans and expert advice for your oral health."
       path="/consultation-lucknow"
-      image="/main1.png"
+      image="/main1.webp"
       benefits={[
         "Comprehensive oral health assessment",
         "Personalized treatment planning",

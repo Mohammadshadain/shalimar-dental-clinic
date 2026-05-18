@@ -213,7 +213,7 @@ const Hero = () => (
           <img 
             alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
             className="w-full h-full object-cover" 
-            src="/main1.png"
+            src="/main1.webp"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
@@ -272,7 +272,7 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Care at Shalimar Dental Clinic Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover" 
-              src="/sub-main.jpeg"
+              src="/sub-main.webp"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -281,7 +281,7 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Tools for Painless Treatment in Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover" 
-              src="/sub-main1.jpeg"
+              src="/sub-main1.webp"
               referrerPolicy="no-referrer"
             />
           </div>
@@ -432,48 +432,48 @@ const Testimonials = () => {
   {
     id: 1,
     category: "Teeth Whitening",
-    before: "/whitening-before.png",
-    after: "/whitening-after.png",
+    before: "/whitening-before.webp",
+    after: "/whitening-after.webp",
     desc: "Advanced laser teeth whitening treatment for a brighter and stain-free smile.",
   },
 
   {
     id: 2,
     category: "Orthodontics (Braces)",
-    before: "/braces--before.png",
-    after: "/braces-after.png",
+    before: "/braces--before.webp",
+    after: "/braces-after.webp",
     desc: "Perfect dental alignment achieved with advanced braces treatment in Lucknow.",
   },
 
   {
     id: 3,
     category: "Smile Makeover",
-    before: "/smile-before.png",
-    after: "/smile-after.png",
+    before: "/smile-before.webp",
+    after: "/smile-after.webp",
     desc: "Complete smile reconstruction using veneers and cosmetic dentistry.",
   },
 
   {
     id: 4,
     category: "Teeth Cleaning",
-    before: "/cleaning-before.png",
-    after: "/cleaning-after.png",
+    before: "/cleaning-before.webp",
+    after: "/cleaning-after.webp",
     desc: "Professional dental cleaning and scaling treatment for healthier teeth and gums.",
   },
 
   {
     id: 5,
     category: "Dental Implants",
-    before: "/implant--before.png",
-    after: "/implant--after.png",
+    before: "/implant--before.webp",
+    after: "/implant--after.webp",
     desc: "Permanent tooth replacement using premium-quality dental implants.",
   },
 
   {
     id: 6,
     category: "Root Canal (RCT)",
-    before: "/rct-before.png",
-    after: "/rct-after.png",
+    before: "/rct-before.webp",
+    after: "/rct-after.webp",
     desc: "Painless root canal treatment to save damaged natural teeth.",
   },
 ];
@@ -769,56 +769,56 @@ const Blog = () => {
       title: "Root canal cost in Lucknow", 
       excerpt: "Find out the average cost and benefits of root canal treatment in Lucknow.", 
       date: "May 10, 2024",
-      image: "cost1111.png",
+      image: "cost1111.webp",
       link: "/blog/root-canal-cost-lucknow"
     },
     { 
       title: "How to stop tooth pain", 
       excerpt: "Immediate steps you can take to manage toothache before seeing a dentist.", 
       date: "May 12, 2024",
-      image: "cost4.png",
+      image: "cost4.webp",
       link: "/blog/how-to-stop-tooth-pain-immediately"
     },
     { 
       title: "Dental implant cost in Lucknow", 
       excerpt: "Understanding the investment required for permanent tooth replacement.", 
       date: "May 14, 2024",
-      image: "cost3.png",
+      image: "cost3.webp",
       link: "/blog/dental-implant-vs-bridge"
     },
     { 
       title: "How to maintain oral hygiene", 
       excerpt: "Daily habits that will keep your smile bright and healthy for years.", 
       date: "May 16, 2024",
-      image: "cost8.png",
+      image: "cost8.webp",
       link: "/blog/benefits-of-teeth-cleaning"
     },
     { 
       title: "Tooth extraction aftercare", 
       excerpt: "Essential tips for a quick and painless recovery after a tooth removal.", 
       date: "May 18, 2024",
-      image: "cost77.png",
+      image: "cost77.webp",
       link: "/blog/wisdom-tooth-extraction-recovery"
     },
     { 
       title: "Braces treatment cost", 
       excerpt: "Comparing different types of braces and their costs in the local area.", 
       date: "May 20, 2024",
-      image: "cost6.png",
+      image: "cost6.webp",
       link: "/blog/types-of-braces-cost-lucknow"
     },
     { 
       title: "Best dentist in Lucknow", 
       excerpt: "What to look for when choosing the right dental professional for your family.", 
       date: "May 22, 2024",
-      image: "cost5.png",
+      image: "cost5.webp",
       link: "/blog/how-to-choose-best-dentist"
     },
     { 
       title: "Child's first dental visit", 
       excerpt: "Expert guidance for your child's first step towards oral health.", 
       date: "May 24, 2024",
-      image: "main1.png",
+      image: "main1.webp",
       link: "/blog/child-first-dental-visit"
     }
   ];
@@ -1066,7 +1066,7 @@ const TeamPage = () => (
             name: "Dr. Azim Ahmad", 
             role: "Chief Dental Surgeon", 
             degree: "MDS (Oral & Maxillofacial)", 
-            image: "azeem2.png",
+            image: "azeem2.webp",
             expertise: "Implants, Trauma",
             focus: "Complex Extractions",
             description: "Chief specialist in Oral & Maxillofacial Surgery, specializing in complex extractions, implants, and corrective jaw surgeries with clinical precision.",
@@ -1076,7 +1076,7 @@ const TeamPage = () => (
             name: "Dr. Mohd Nadeem", 
             role: "Surgery Specialist", 
             degree: "MDS (Oral & Maxillofacial)", 
-            image: "Nadeem.png",
+            image: "Nadeem.webp",
             expertise: "Maxillofacial Surgery",
             focus: "Surgical Precision",
             description: "Expert in advanced surgical techniques for dental restoration and facial reconstruction, prioritizing patient safety and optimal clinical outcomes.",
@@ -1086,7 +1086,7 @@ const TeamPage = () => (
             name: "Dr. Shahnawaz Alam", 
             role: "Surgery Specialist", 
             degree: "MDS (Oral & Maxillofacial)", 
-            image: "shanawaz1.png",
+            image: "shanawaz1.webp",
             expertise: "Oral Surgery, Trauma",
             focus: "Specialist Surgeon",
             description: "Dedicated to high-quality surgical care, from routine extractions to complex reconstructive procedures with a patient-centered approach.",
@@ -1096,7 +1096,7 @@ const TeamPage = () => (
             name: "Dr. Mohammad Aamir Khan", 
             role: "Dental Surgeon", 
             degree: "General Dentistry", 
-            image: "amir.png",
+            image: "amir.webp",
             expertise: "General Care, Scaling",
             focus: "Patient Wellness",
             description: "Specializing in comprehensive general dentistry and preventive care, ensuring long-term oral health for all patients in Dubagga.",

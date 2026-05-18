@@ -8,7 +8,7 @@ const WisdomToothRecovery = () => {
       seoTitle="Wisdom Tooth Extraction Recovery Guide | Aftercare Tips"
       seoDescription="Just had your wisdom teeth removed? Follow our expert day-by-day recovery guide from Shalimar Dental Clinic Lucknow to ensure fast, painless healing."
       path="/blog/wisdom-tooth-extraction-recovery"
-      image="/main1.png"
+      image="/main1.webp"
       date="May 18, 2024"
       author="Dr. Azim Ahmad"
       readTime="5 min read"

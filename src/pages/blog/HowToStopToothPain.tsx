@@ -8,7 +8,7 @@ const HowToStopToothPain = () => {
       seoTitle="How to Stop Tooth Pain Immediately | Emergency Dental Tips"
       seoDescription="Experiencing severe tooth pain? Learn how to stop tooth pain immediately with these expert tips and home remedies before you visit your dentist in Lucknow."
       path="/blog/how-to-stop-tooth-pain-immediately"
-      image="/rct-before.png"
+      image="/rct-before.webp"
       date="May 12, 2024"
       author="Dr. Azim Ahmad"
       readTime="4 min read"

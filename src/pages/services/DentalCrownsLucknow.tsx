@@ -8,7 +8,7 @@ const DentalCrownsLucknow = () => {
       seoTitle="Dental Crowns Lucknow | Protective Caps | Shalimar Dental"
       seoDescription="Restore your damaged teeth with high-quality dental crowns in Lucknow. Precise fit and natural-looking crowns at Shalimar Dental Clinic near Dubagga."
       path="/dental-crowns-lucknow"
-      image="/cost8.png"
+      image="/cost8.webp"
       benefits={[
         "Durable and high-strength materials",
         "Perfect shade matching",

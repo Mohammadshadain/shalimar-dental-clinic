@@ -8,7 +8,7 @@ const HowToChooseDentist = () => {
       seoTitle="Best Dentist in Lucknow Checklist | How to Find Top Clinics"
       seoDescription="Finding a good dentist can be hard. Use our complete checklist to choose the best dentist in Lucknow who is experienced, affordable, and nearby near Dubagga."
       path="/blog/how-to-choose-best-dentist"
-      image="/sub-main.jpeg"
+      image="/sub-main.webp"
       date="May 22, 2024"
       author="Dr. Azim Ahmad"
       readTime="5 min read"

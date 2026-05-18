@@ -8,7 +8,7 @@ const KidsDentistryLucknow = () => {
       seoTitle="Best Pediatric Dentist in Lucknow | Kids Dental Care Lucknow"
       seoDescription="Shalimar Dental Clinic offers gentle and friendly dental care for children in Lucknow. Painless treatments and specialized pediatric services near Dubagga."
       path="/kids-dentistry-lucknow"
-      image="/main1.png"
+      image="/main1.webp"
       benefits={[
         "Child-friendly and comforting environment",
         "Painless treatments designed for kids",

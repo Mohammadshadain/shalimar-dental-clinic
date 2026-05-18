@@ -8,7 +8,7 @@ const DentalImplantLucknow = () => {
       seoTitle="Best Dental Implants in Lucknow | Permanent Tooth Replacement"
       seoDescription="Get permanent tooth replacement with high-quality dental implants in Lucknow at Shalimar Dental Clinic. Expert implant surgeons and affordable cost near Dubagga."
       path="/dental-implant-lucknow"
-      image="/implant--after.png"
+      image="/implant--after.webp"
       benefits={[
         "Looks and feels like natural teeth",
         "Prevents bone loss in the jaw",

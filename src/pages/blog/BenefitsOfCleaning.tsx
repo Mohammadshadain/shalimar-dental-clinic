@@ -8,7 +8,7 @@ const BenefitsOfCleaning = () => {
       seoTitle="Benefits of Teeth Cleaning | Why Professional Scaling is Key"
       seoDescription="Discover the benefits of professional teeth cleaning in Lucknow. From preventing gum disease to brightening your smile, learn why scaling is essential for your health."
       path="/blog/benefits-of-teeth-cleaning"
-      image="/cleaning-after.png"
+      image="/cleaning-after.webp"
       date="May 16, 2024"
       author="Dr. Azim Ahmad"
       readTime="3 min read"

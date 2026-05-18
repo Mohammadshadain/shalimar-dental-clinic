@@ -8,7 +8,7 @@ const RootCanalTreatmentLucknow = () => {
       seoTitle="Best Root Canal Treatment in Lucknow | Painless RCT Lucknow"
       seoDescription="Looking for painless root canal treatment in Lucknow? Shalimar Dental Clinic offers expert RCT services at affordable prices near Dubagga. Book your consultation today."
       path="/root-canal-treatment-lucknow"
-      image="/rct-after.png"
+      image="/rct-after.webp"
       benefits={[
         "Eliminates tooth pain immediately",
         "Saves your natural tooth from extraction",

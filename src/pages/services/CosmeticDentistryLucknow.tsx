@@ -8,7 +8,7 @@ const CosmeticDentistryLucknow = () => {
       seoTitle="Cosmetic Dentistry Lucknow | Smile Enhancement | Shalimar Dental"
       seoDescription="Transform your smile with expert cosmetic dentistry in Lucknow. Shalimar Dental Clinic offers veneers, bonding, and total smile makeovers near Dubagga."
       path="/cosmetic-dentistry-lucknow"
-      image="/cost4.png"
+      image="/cost4.webp"
       benefits={[
         "Customized smile design",
         "High-quality porcelain veneers",

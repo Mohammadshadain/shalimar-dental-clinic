@@ -8,7 +8,7 @@ const GumTreatmentLucknow = () => {
       seoTitle="Advanced Gum Treatment in Lucknow | Periodontal Surgery"
       seoDescription="Expert treatment for bleeding gums and periodontal disease in Lucknow at Shalimar Dental Clinic. Save your teeth with professional gum care near Dubagga."
       path="/gum-treatment-lucknow"
-      image="/cleaning-before.png"
+      image="/cleaning-before.webp"
       benefits={[
         "Stops gum bleeding and inflammation",
         "Eliminates persistent bad breath",

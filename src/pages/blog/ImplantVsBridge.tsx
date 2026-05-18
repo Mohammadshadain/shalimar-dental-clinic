@@ -8,7 +8,7 @@ const ImplantVsBridge = () => {
       seoTitle="Dental Implant vs Bridge | Best Tooth Replacement Lucknow"
       seoDescription="Missing a tooth? Compare dental implants vs bridges to find out which is the best option for your oral health and budget. Expert advice from Shalimar Dental Lucknow."
       path="/blog/dental-implant-vs-bridge"
-      image="/implant--after.png"
+      image="/implant--after.webp"
       date="May 14, 2024"
       author="Dr. Azim Ahmad"
       readTime="6 min read"
