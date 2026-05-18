@@ -805,21 +805,21 @@ const Blog = () => {
       title: "Root canal cost in Lucknow", 
       excerpt: "Find out the average cost and benefits of root canal treatment in Lucknow.", 
       date: "May 10, 2024",
-      image: "cost11.webp",
+      image: "cost1111.webp",
       link: "/blog/root-canal-cost-lucknow"
     },
     { 
       title: "How to stop tooth pain", 
       excerpt: "Immediate steps you can take to manage toothache before seeing a dentist.", 
       date: "May 12, 2024",
-      image: "cost44.webp",
+      image: "cost4.webp",
       link: "/blog/how-to-stop-tooth-pain-immediately"
     },
     { 
       title: "Dental implant cost in Lucknow", 
       excerpt: "Understanding the investment required for permanent tooth replacement.", 
       date: "May 14, 2024",
-      image: "cost33.webp",
+      image: "cost3.webp",
       link: "/blog/dental-implant-vs-bridge"
     },
     { 
