@@ -203,22 +203,24 @@ const Hero = () => (
           </div>
         </div>
       </motion.div>
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="w-full lg:w-1/2 relative"
-      >
+      <div className="w-full lg:w-1/2 relative">
         <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/3] sm:aspect-video lg:aspect-[4/3] bg-slate-100">
           <picture>
-            <source srcSet="/main1.webp" type="image/webp" />
+            <source 
+              media="(max-width: 768px)" 
+              srcSet="main1.webp" 
+            />
+            <source 
+              media="(min-width: 769px)" 
+              srcSet="main1.webp" 
+            />
             <img 
               alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
               className="w-full h-full object-cover" 
               src="main1.webp"
               referrerPolicy="no-referrer"
-              width="400"
-              height="300"
+              width="600"
+              height="450"
               fetchPriority="high"
               loading="eager"
               decoding="sync"
@@ -235,7 +237,7 @@ const Hero = () => (
           </div>
           <p className="text-xs sm:text-sm text-on-surface font-extrabold leading-tight">Advanced root canal and implants by our expert clinical team in Lucknow.</p>
         </div>
-      </motion.div>
+      </div>
     </div>
   </section>
 );
@@ -279,8 +281,8 @@ const About = () => (
             <motion.img 
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Care at Shalimar Dental Clinic Lucknow" 
-              className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover" 
-              src="/sub-main.webp"
+              className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
+              src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=60&w=400"
               referrerPolicy="no-referrer"
               width="400"
               height="533"
@@ -292,8 +294,8 @@ const About = () => (
             <motion.img 
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Tools for Painless Treatment in Lucknow" 
-              className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover" 
-              src="/sub-main1.webp"
+              className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
+              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=60&w=400"
               referrerPolicy="no-referrer"
               width="400"
               height="533"
@@ -593,7 +595,15 @@ const Testimonials = () => {
                   className="group p-4 cursor-pointer"
                   aria-label={`Go to slide ${i + 1}`}
                 >
-                  <div className={`h-3 rounded-full transition-all duration-300 ${currentIndex === i ? "w-12 bg-primary" : "w-3 bg-slate-300 group-hover:bg-primary/30"}`} />
+                  <div 
+                    className={`h-3 rounded-full transition-all duration-300 ${currentIndex === i ? "bg-primary" : "bg-slate-300 group-hover:bg-primary/30"}`} 
+                    style={{ 
+                      width: '12px',
+                      transform: currentIndex === i ? 'scaleX(4)' : 'scaleX(1)',
+                      transformOrigin: 'center center',
+                      transition: 'background-color 300ms, transform 300ms cubic-bezier(0.4, 0, 0.2, 1)' 
+                    }}
+                  />
                 </button>
               ))}
             </div>
