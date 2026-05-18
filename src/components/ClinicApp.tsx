@@ -213,7 +213,7 @@ const Hero = () => (
           <img 
             alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
             className="w-full h-full object-cover" 
-            src="https://images.unsplash.com/photo-1629909613654-28a3a7c4a45e?auto=format&fit=crop&fm=webp&q=80&w=1200"
+            src="main1.webp"
             referrerPolicy="no-referrer"
             width="800"
             height="600"
