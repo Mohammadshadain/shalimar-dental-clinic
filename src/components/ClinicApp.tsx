@@ -213,7 +213,7 @@ const Hero = () => (
           <img 
             alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
             className="w-full h-full object-cover" 
-            src="main1.webp"
+            src="https://images.unsplash.com/photo-1629909613654-28a3a7c4a45e?auto=format&fit=crop&fm=webp&q=80&w=800"
             referrerPolicy="no-referrer"
             width="800"
             height="600"
@@ -228,7 +228,7 @@ const Hero = () => (
             <div className="p-2 bg-tertiary-container/10 rounded-lg">
               <BadgeCheck className="text-tertiary w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <h4 className="font-bold text-primary text-sm sm:text-base">Expert Care</h4>
+            <h3 className="font-bold text-primary text-sm sm:text-base">Expert Care</h3>
           </div>
           <p className="text-xs sm:text-sm text-on-surface-variant font-medium">Advanced treatments like root canal and implants by our expert clinical team.</p>
         </div>
@@ -746,9 +746,9 @@ const FAQ = () => {
               <div key={i} className="bg-white rounded-2xl overflow-hidden shadow-sm border border-surface-container">
                 <button 
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                  className="w-full flex items-center justify-between p-6 text-left cursor-pointer active:bg-primary/5 transition-colors"
+                  className="w-full flex items-center justify-between p-6 text-left cursor-pointer active:bg-primary/5 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/20"
                 >
-                  <span className="font-bold text-primary text-base sm:text-lg pr-4">{faq.q}</span>
+                  <h3 className="font-bold text-primary text-base sm:text-lg pr-4">{faq.q}</h3>
                   {openIndex === i ? <ChevronUp className="w-5 h-5 text-primary shrink-0" /> : <ChevronDown className="w-5 h-5 text-on-surface-variant shrink-0" />}
                 </button>
                 <AnimatePresence>
@@ -985,10 +985,10 @@ const MobileNav = () => {
   const location = useLocation();
   
   return (
-    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] z-50 flex justify-between items-center px-4 py-3 bg-white/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,63,135,0.15)] border border-white/50 rounded-[2.5rem]">
+    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] z-50 flex justify-between items-center px-2 py-3 bg-white/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,63,135,0.15)] border border-white/50 rounded-[2.5rem]">
       <Link 
         to="/" 
-        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 ${location.pathname === "/" ? "text-primary" : "text-on-surface/80 hover:text-primary/60"}`}
+        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 min-h-[44px] ${location.pathname === "/" ? "text-primary" : "text-on-surface/80 hover:text-primary/60"}`}
       >
         <div className={`p-2 rounded-2xl transition-colors ${location.pathname === "/" ? "bg-primary/5" : ""}`}>
           <Home className="w-5 h-5" />
@@ -999,7 +999,7 @@ const MobileNav = () => {
       <div className="px-2">
         <Link 
           to="/appointment" 
-          className="flex flex-col items-center justify-center -mt-12 group transition-all"
+          className="flex flex-col items-center justify-center -mt-12 group transition-all min-h-[44px]"
         >
           <div className="bg-primary p-4.5 rounded-full shadow-[0_10px_25px_rgba(0,63,135,0.4)] border-4 border-white group-hover:scale-110 group-active:scale-95 transition-all">
             <Calendar className="w-6 h-6 text-white" />
@@ -1007,12 +1007,12 @@ const MobileNav = () => {
           <span className="text-[10px] font-black text-primary mt-2 uppercase tracking-widest bg-white/80 px-3 py-1 rounded-full border border-primary/5">Book</span>
         </Link>
       </div>
-
+ 
       <a 
         href="https://www.instagram.com/shalimar_dentalclinic_dubagga?igsh=em0ybnlhemh1d3Rs" 
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 text-on-surface/80 hover:text-primary/60`}
+        className={`flex-1 flex flex-col items-center justify-center gap-1 transition-all active:scale-90 min-h-[44px] text-on-surface/80 hover:text-primary/60`}
       >
         <div className={`p-2 rounded-2xl transition-colors`}>
           <Instagram className="w-5 h-5" />
