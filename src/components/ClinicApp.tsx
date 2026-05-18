@@ -282,7 +282,7 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Care at Shalimar Dental Clinic Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
-              src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=60&w=400"
+              src="sub-main1.webp"
               referrerPolicy="no-referrer"
               width="400"
               height="533"
@@ -295,7 +295,7 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Tools for Painless Treatment in Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
-              src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=60&w=400"
+              src="sub-main.webp"
               referrerPolicy="no-referrer"
               width="400"
               height="533"
