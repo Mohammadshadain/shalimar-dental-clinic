@@ -208,11 +208,11 @@ const Hero = () => (
           <picture>
             <source 
               media="(max-width: 768px)" 
-              srcSet="main1.webp" 
+              srcSet="main11.webp" 
             />
             <source 
               media="(min-width: 769px)" 
-              srcSet="main1.webp" 
+              srcSet="main11.webp" 
             />
             <img 
               alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
