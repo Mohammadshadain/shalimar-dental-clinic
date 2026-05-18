@@ -171,9 +171,8 @@ const Hero = () => (
   <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-32 px-4 md:px-6 overflow-hidden">
     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
       <motion.div 
-        initial={{ opacity: 0, x: -20 }}
+        initial={false}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
         className="w-full lg:w-1/2 z-10 text-center lg:text-left"
       >
         <h1 className="text-primary text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold font-headline leading-[1.1] tracking-tight mb-6">
@@ -219,8 +218,8 @@ const Hero = () => (
               className="w-full h-full object-cover" 
               src="/main11.webp"
               referrerPolicy="no-referrer"
-              width="600"
-              height="450"
+              width="665"
+              height="500"
               fetchPriority="high"
               loading="eager"
               decoding="sync"
@@ -284,8 +283,8 @@ const About = () => (
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
               src="/sub-main1.webp"
               referrerPolicy="no-referrer"
-              width="352"
-              height="469"
+              width="320"
+              height="427"
               loading="lazy"
               decoding="async"
             />
@@ -297,8 +296,8 @@ const About = () => (
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
               src="/sub-main.webp"
               referrerPolicy="no-referrer"
-              width="352"
-              height="469"
+              width="320"
+              height="427"
               loading="lazy"
               decoding="async"
             />
