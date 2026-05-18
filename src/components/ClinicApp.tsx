@@ -171,8 +171,9 @@ const Hero = () => (
   <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-32 px-4 md:px-6 overflow-hidden">
     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
       <motion.div 
-        initial={false}
+        initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6 }}
         className="w-full lg:w-1/2 z-10 text-center lg:text-left"
       >
         <h1 className="text-primary text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold font-headline leading-[1.1] tracking-tight mb-6">
@@ -207,19 +208,19 @@ const Hero = () => (
           <picture>
             <source 
               media="(max-width: 768px)" 
-              srcSet="/main11.webp" 
+              srcSet="main11.webp" 
             />
             <source 
               media="(min-width: 769px)" 
-              srcSet="/main11.webp" 
+              srcSet="main11.webp" 
             />
             <img 
               alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
               className="w-full h-full object-cover" 
-              src="/main11.webp"
+              src="main1.webp"
               referrerPolicy="no-referrer"
-              width="665"
-              height="500"
+              width="600"
+              height="450"
               fetchPriority="high"
               loading="eager"
               decoding="sync"
@@ -227,14 +228,14 @@ const Hero = () => (
           </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
         </div>
-        <div className="absolute -bottom-4 sm:-bottom-16 left-0 sm:-left-6 bg-white/95 backdrop-blur-md p-2 sm:p-6 rounded-xl sm:rounded-2xl shadow-xl w-[45%] sm:max-w-xs z-20 border border-slate-100">
-          <div className="flex items-center gap-1.5 sm:gap-3 mb-1 sm:mb-3">
-            <div className="p-1 sm:p-2 bg-secondary/10 rounded-lg">
-              <BadgeCheck className="text-secondary w-3.5 h-3.5 sm:w-6 sm:h-6" />
+        <div className="absolute -bottom-6 sm:-bottom-16 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl max-w-[240px] sm:max-w-xs z-20 border border-slate-100">
+          <div className="flex items-center gap-3 mb-2 sm:mb-3">
+            <div className="p-2 bg-secondary/10 rounded-lg">
+              <BadgeCheck className="text-secondary w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            <div className="font-black text-primary text-[10px] sm:text-base">Expert Care</div>
+            <div className="font-black text-primary text-sm sm:text-base">Expert Care</div>
           </div>
-          <p className="text-[9px] sm:text-sm text-on-surface font-extrabold leading-tight">Advanced root canal and implants by our expert clinical team in Lucknow.</p>
+          <p className="text-xs sm:text-sm text-on-surface font-extrabold leading-tight">Advanced root canal and implants by our expert clinical team in Lucknow.</p>
         </div>
       </div>
     </div>
@@ -281,10 +282,10 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Care at Shalimar Dental Clinic Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
-              src="/sub-main1.webp"
+              src="sub-main1.webp"
               referrerPolicy="no-referrer"
-              width="320"
-              height="427"
+              width="400"
+              height="533"
               loading="lazy"
               decoding="async"
             />
@@ -294,10 +295,10 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Tools for Painless Treatment in Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
-              src="/sub-main.webp"
+              src="sub-main.webp"
               referrerPolicy="no-referrer"
-              width="320"
-              height="427"
+              width="400"
+              height="533"
               loading="lazy"
               decoding="async"
             />
@@ -445,29 +446,55 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   
-  const results = [
-    {
-      id: 1,
-      category: "Teeth Whitening",
-      before: "/whitening-before.webp",
-      after: "/whitening-after.webp",
-      desc: "Advanced laser teeth whitening treatment for a brighter and stain-free smile.",
-    },
-    {
-      id: 2,
-      category: "Orthodontics",
-      before: "/braces--before.webp",
-      after: "/braces-after.webp",
-      desc: "Perfect dental alignment achieved with advanced braces treatment in Lucknow.",
-    },
-    {
-      id: 3,
-      category: "Smile Makeover",
-      before: "/smile-before.webp",
-      after: "/smile-after.webp",
-      desc: "Complete smile reconstruction using veneers and cosmetic dentistry.",
-    }
-  ];
+ const results = [
+  {
+    id: 1,
+    category: "Teeth Whitening",
+    before: "/whitening-before.webp",
+    after: "/whitening-after.webp",
+    desc: "Advanced laser teeth whitening treatment for a brighter and stain-free smile.",
+  },
+
+  {
+    id: 2,
+    category: "Orthodontics (Braces)",
+    before: "/braces--before.webp",
+    after: "/braces-after.webp",
+    desc: "Perfect dental alignment achieved with advanced braces treatment in Lucknow.",
+  },
+
+  {
+    id: 3,
+    category: "Smile Makeover",
+    before: "/smile-before.webp",
+    after: "/smile-after.webp",
+    desc: "Complete smile reconstruction using veneers and cosmetic dentistry.",
+  },
+
+  {
+    id: 4,
+    category: "Teeth Cleaning",
+    before: "/cleaning-before.webp",
+    after: "/cleaning-after.webp",
+    desc: "Professional dental cleaning and scaling treatment for healthier teeth and gums.",
+  },
+
+  {
+    id: 5,
+    category: "Dental Implants",
+    before: "/implant--before.webp",
+    after: "/implant--after.webp",
+    desc: "Permanent tooth replacement using premium-quality dental implants.",
+  },
+
+  {
+    id: 6,
+    category: "Root Canal (RCT)",
+    before: "/rct-before.webp",
+    after: "/rct-after.webp",
+    desc: "Painless root canal treatment to save damaged natural teeth.",
+  },
+];
 
   const next = () => setCurrentIndex((prev) => (prev + 1) % results.length);
   const prev = () => setCurrentIndex((prev) => (prev - 1 + results.length) % results.length);
@@ -778,56 +805,56 @@ const Blog = () => {
       title: "Root canal cost in Lucknow", 
       excerpt: "Find out the average cost and benefits of root canal treatment in Lucknow.", 
       date: "May 10, 2024",
-      image: "/cost1111.webp",
+      image: "cost1111.webp",
       link: "/blog/root-canal-cost-lucknow"
     },
     { 
       title: "How to stop tooth pain", 
       excerpt: "Immediate steps you can take to manage toothache before seeing a dentist.", 
       date: "May 12, 2024",
-      image: "/cost4.webp",
+      image: "cost4.webp",
       link: "/blog/how-to-stop-tooth-pain-immediately"
     },
     { 
       title: "Dental implant cost in Lucknow", 
       excerpt: "Understanding the investment required for permanent tooth replacement.", 
       date: "May 14, 2024",
-      image: "/cost3.webp",
+      image: "cost3.webp",
       link: "/blog/dental-implant-vs-bridge"
     },
     { 
       title: "How to maintain oral hygiene", 
       excerpt: "Daily habits that will keep your smile bright and healthy for years.", 
       date: "May 16, 2024",
-      image: "/cost8.webp",
+      image: "cost8.webp",
       link: "/blog/benefits-of-teeth-cleaning"
     },
     { 
       title: "Tooth extraction aftercare", 
       excerpt: "Essential tips for a quick and painless recovery after a tooth removal.", 
       date: "May 18, 2024",
-      image: "/cost77.webp",
+      image: "cost77.webp",
       link: "/blog/wisdom-tooth-extraction-recovery"
     },
     { 
       title: "Braces treatment cost", 
       excerpt: "Comparing different types of braces and their costs in the local area.", 
       date: "May 20, 2024",
-      image: "/cost6.webp",
+      image: "cost6.webp",
       link: "/blog/types-of-braces-cost-lucknow"
     },
     { 
       title: "Best dentist in Lucknow", 
       excerpt: "What to look for when choosing the right dental professional for your family.", 
       date: "May 22, 2024",
-      image: "/cost5.webp",
+      image: "cost5.webp",
       link: "/blog/how-to-choose-best-dentist"
     },
     { 
       title: "Child's first dental visit", 
       excerpt: "Expert guidance for your child's first step towards oral health.", 
       date: "May 24, 2024",
-      image: "/main11.webp",
+      image: "main1.webp",
       link: "/blog/child-first-dental-visit"
     }
   ];
