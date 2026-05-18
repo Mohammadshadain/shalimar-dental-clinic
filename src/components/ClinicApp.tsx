@@ -49,7 +49,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -179,13 +179,13 @@ const Hero = () => (
         <h1 className="text-primary text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold font-headline leading-[1.1] tracking-tight mb-6">
           Shalimar Dental Clinic - <span className="text-secondary">Best Dentist in Lucknow.</span>
         </h1>
-        <p className="text-base sm:text-lg text-on-surface-variant mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium">
+        <p className="text-base sm:text-lg text-black mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-bold">
           Experience premium dental care in a clinical sanctuary designed for your comfort and health. Trusted by thousands for painless treatments.
         </p>
         <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-6">
           <Link 
             to="/services"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4 rounded-xl font-bold tracking-wide transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-br from-primary to-primary-container text-white px-8 py-4.5 rounded-xl font-bold tracking-wide transition-all hover:shadow-xl hover:-translate-y-1 active:scale-95 min-h-[48px]"
           >
             Discover Treatments
             <ArrowRight className="w-5 h-5" />
@@ -199,7 +199,7 @@ const Hero = () => (
                 <img src="https://picsum.photos/seed/dentist2/100/100" alt="Top Dental Specialist near Dubagga Lucknow" referrerPolicy="no-referrer" width="40" height="40" loading="eager" />
               </div>
             </div>
-            <span className="text-sm font-bold text-on-surface-variant">Trusted by 5000+ Patients</span>
+            <span className="text-sm font-black text-primary uppercase tracking-tight">Trusted by 5000+ Patients</span>
           </div>
         </div>
       </motion.div>
@@ -209,28 +209,31 @@ const Hero = () => (
         transition={{ duration: 0.6, delay: 0.2 }}
         className="w-full lg:w-1/2 relative"
       >
-        <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/3] sm:aspect-video lg:aspect-[4/3]">
-          <img 
-            alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
-            className="w-full h-full object-cover" 
-            src="main1.webp"
-            referrerPolicy="no-referrer"
-            width="600"
-            height="450"
-            fetchPriority="high"
-            loading="eager"
-            decoding="sync"
-          />
+        <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/3] sm:aspect-video lg:aspect-[4/3] bg-slate-100">
+          <picture>
+            <source srcSet="/main1.webp" type="image/webp" />
+            <img 
+              alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
+              className="w-full h-full object-cover" 
+              src="main1.webp"
+              referrerPolicy="no-referrer"
+              width="400"
+              height="300"
+              fetchPriority="high"
+              loading="eager"
+              decoding="sync"
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
         </div>
-        <div className="absolute -bottom-6 sm:-bottom-16 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl max-w-[240px] sm:max-w-xs z-20">
+        <div className="absolute -bottom-6 sm:-bottom-16 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl max-w-[240px] sm:max-w-xs z-20 border border-slate-100">
           <div className="flex items-center gap-3 mb-2 sm:mb-3">
-            <div className="p-2 bg-tertiary-container/30 rounded-lg">
-              <BadgeCheck className="text-tertiary w-5 h-5 sm:w-6 sm:h-6" />
+            <div className="p-2 bg-secondary/10 rounded-lg">
+              <BadgeCheck className="text-secondary w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div className="font-black text-primary text-sm sm:text-base">Expert Care</div>
           </div>
-          <p className="text-xs sm:text-sm text-on-surface font-bold">Advanced treatments like root canal and implants by our expert clinical team.</p>
+          <p className="text-xs sm:text-sm text-on-surface font-extrabold leading-tight">Advanced root canal and implants by our expert clinical team in Lucknow.</p>
         </div>
       </motion.div>
     </div>
@@ -255,18 +258,18 @@ const About = () => (
             </p>
           </div>
           <div className="grid sm:grid-cols-2 gap-6 text-left max-w-xl mx-auto lg:mx-0">
-            <div className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-surface-container">
-              <CheckCircle2 className="text-secondary w-6 h-6 mt-1 shrink-0" />
+            <div className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <CheckCircle2 className="text-secondary w-7 h-7 mt-1 shrink-0" />
               <div>
-                <h4 className="font-bold text-primary">Modern Tech</h4>
-                <p className="text-xs sm:text-sm text-on-surface-variant">Equipped with the latest digital X-rays.</p>
+                <h3 className="font-black text-primary text-lg">Modern Tech</h3>
+                <p className="text-xs sm:text-sm text-on-surface font-bold">Equipped with the latest digital X-rays.</p>
               </div>
             </div>
-            <div className="flex items-start gap-4 p-4 bg-white rounded-2xl shadow-sm border border-surface-container">
-              <CheckCircle2 className="text-secondary w-6 h-6 mt-1 shrink-0" />
+            <div className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm border border-slate-100">
+              <CheckCircle2 className="text-secondary w-7 h-7 mt-1 shrink-0" />
               <div>
-                <h4 className="font-bold text-primary">Hygiene First</h4>
-                <p className="text-xs sm:text-sm text-on-surface-variant">Strict international hygiene protocols.</p>
+                <h3 className="font-black text-primary text-lg">Hygiene First</h3>
+                <p className="text-xs sm:text-sm text-on-surface font-bold">Strict international hygiene protocols.</p>
               </div>
             </div>
           </div>
@@ -537,13 +540,21 @@ const Testimonials = () => {
             onMouseLeave={() => setIsPaused(false)}
           >
             <div className="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
-              <h2 className="text-2xl sm:text-3xl font-bold font-headline text-primary">Before & After</h2>
-              <div className="flex gap-2">
-                <button onClick={prev} className="p-3 rounded-full bg-white border border-surface-container hover:bg-primary hover:text-white transition-all shadow-sm active:scale-90 cursor-pointer" aria-label="Previous story">
-                  <ChevronLeft className="w-5 h-5" />
+              <h3 className="text-2xl sm:text-3xl font-black font-headline text-primary">Before & After</h3>
+              <div className="flex gap-4">
+                <button 
+                  onClick={prev} 
+                  className="p-4 rounded-full bg-white border border-surface-container hover:bg-primary hover:text-white transition-all shadow-md active:scale-90 cursor-pointer min-w-[48px] min-h-[48px] flex items-center justify-center" 
+                  aria-label="Previous story"
+                >
+                  <ChevronLeft className="w-6 h-6" />
                 </button>
-                <button onClick={next} className="p-3 rounded-full bg-white border border-surface-container hover:bg-primary hover:text-white transition-all shadow-sm active:scale-90 cursor-pointer" aria-label="Next story">
-                  <ChevronRight className="w-5 h-5" />
+                <button 
+                  onClick={next} 
+                  className="p-4 rounded-full bg-white border border-surface-container hover:bg-primary hover:text-white transition-all shadow-md active:scale-90 cursor-pointer min-w-[48px] min-h-[48px] flex items-center justify-center" 
+                  aria-label="Next story"
+                >
+                  <ChevronRight className="w-6 h-6" />
                 </button>
               </div>
             </div>
@@ -568,21 +579,21 @@ const Testimonials = () => {
                   </div>
                 </div>
                 <div className="p-6 sm:p-8">
-                  <h3 className="font-bold text-primary text-lg sm:text-xl mb-2">{results[currentIndex].category}</h3>
+                  <h4 className="font-black text-primary text-xl sm:text-2xl mb-2">{results[currentIndex].category}</h4>
                   <p className="text-sm sm:text-base text-on-surface leading-relaxed font-bold">{results[currentIndex].desc}</p>
                 </div>
               </motion.div>
             </div>
             
-            <div className="flex justify-center gap-1 mt-8">
+            <div className="flex justify-center gap-2 mt-8">
               {results.map((_, i) => (
                 <button 
                   key={i}
                   onClick={() => setCurrentIndex(i)}
-                  className="group p-3 cursor-pointer"
+                  className="group p-4 cursor-pointer"
                   aria-label={`Go to slide ${i + 1}`}
                 >
-                  <div className={`h-2 rounded-full transition-all duration-300 ${currentIndex === i ? "w-8 bg-primary" : "w-2 bg-surface-container group-hover:bg-primary/30"}`} />
+                  <div className={`h-3 rounded-full transition-all duration-300 ${currentIndex === i ? "w-12 bg-primary" : "w-3 bg-slate-300 group-hover:bg-primary/30"}`} />
                 </button>
               ))}
             </div>
@@ -985,26 +996,26 @@ const MobileNav = () => {
   const location = useLocation();
   
   return (
-    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] z-50 flex justify-between items-center px-2 py-3 bg-white/80 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,63,135,0.15)] border border-white/50 rounded-[2.5rem]">
+    <nav className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[92%] z-50 flex justify-between items-center px-4 py-4 bg-white/95 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,63,135,0.2)] border border-white/50 rounded-[2.5rem]">
       <Link 
         to="/" 
-        className={`flex-1 min-h-[44px] flex flex-col items-center justify-center gap-1 transition-all active:scale-90 ${location.pathname === "/" ? "text-primary" : "text-black hover:text-primary"}`}
+        className={`flex-1 min-h-[48px] flex flex-col items-center justify-center gap-1.5 transition-all active:scale-90 ${location.pathname === "/" ? "text-primary" : "text-black hover:text-primary"}`}
       >
-        <div className={`p-2.5 rounded-2xl transition-colors ${location.pathname === "/" ? "bg-primary/5" : ""}`}>
-          <Home className="w-6 h-6" />
+        <div className={`p-3 rounded-2xl transition-colors ${location.pathname === "/" ? "bg-primary/5" : ""}`}>
+          <Home className="w-7 h-7" />
         </div>
-        <span className="text-[10px] font-black uppercase tracking-[0.1em]">Home</span>
+        <span className="text-[11px] font-black uppercase tracking-[0.1em]">Home</span>
       </Link>
       
-      <div className="px-2">
+      <div className="px-4">
         <Link 
           to="/appointment" 
-          className="flex flex-col items-center justify-center -mt-12 group transition-all min-h-[44px]"
+          className="flex flex-col items-center justify-center -mt-14 group transition-all min-h-[48px]"
         >
-          <div className="bg-primary p-5 rounded-full shadow-[0_10px_25px_rgba(0,63,135,0.4)] border-4 border-white group-hover:scale-110 group-active:scale-95 transition-all">
-            <Calendar className="w-7 h-7 text-white" />
+          <div className="bg-primary p-5.5 rounded-full shadow-[0_12px_30px_rgba(0,63,135,0.4)] border-4 border-white group-hover:scale-110 group-active:scale-95 transition-all">
+            <Calendar className="w-8 h-8 text-white" />
           </div>
-          <span className="text-[11px] font-black text-primary mt-2 uppercase tracking-widest bg-white/90 px-4 py-1.5 rounded-full border border-primary/10 shadow-sm">Book</span>
+          <span className="text-[12px] font-black text-primary mt-2.5 uppercase tracking-widest bg-white/95 px-5 py-2 rounded-full border border-primary/20 shadow-md">Book</span>
         </Link>
       </div>
  
@@ -1012,12 +1023,12 @@ const MobileNav = () => {
         href="https://www.instagram.com/shalimar_dentalclinic_dubagga?igsh=em0ybnlhemh1d3Rs" 
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex-1 min-h-[44px] flex flex-col items-center justify-center gap-1 transition-all active:scale-90 text-black hover:text-primary`}
+        className={`flex-1 min-h-[48px] flex flex-col items-center justify-center gap-1.5 transition-all active:scale-90 text-black hover:text-primary`}
       >
-        <div className={`p-2.5 rounded-2xl transition-colors`}>
-          <Instagram className="w-6 h-6" />
+        <div className={`p-3 rounded-2xl transition-colors`}>
+          <Instagram className="w-7 h-7" />
         </div>
-        <span className="text-[10px] font-black uppercase tracking-[0.1em]">Insta</span>
+        <span className="text-[11px] font-black uppercase tracking-[0.1em]">Insta</span>
       </a>
     </nav>
   );
