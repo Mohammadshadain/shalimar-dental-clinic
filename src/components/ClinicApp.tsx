@@ -916,7 +916,7 @@ const Footer = () => (
               <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" /> 9598112677
             </a>
             <div className="flex items-center justify-center md:justify-start gap-2 text-sm text-on-surface-variant font-bold">
-              <Clock className="w-5 h-5 text-secondary" /> <span className="text-on-surface font-bold">11:00 AM — 05:00 PM <span className="text-red-700 font-black ml-1">(Fri Closed)</span></span>
+              <Clock className="w-5 h-5 text-secondary" /> <span className="text-on-surface font-bold">10:00 AM — 08:00 PM <span className="text-red-700 font-black ml-1">(Sun Closed)</span></span>
             </div>
           </div>
         </div>
