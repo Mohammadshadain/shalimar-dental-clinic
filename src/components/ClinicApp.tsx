@@ -95,19 +95,30 @@ const Navbar = () => {
             ))}
           </div>
 
-          <Link 
-            to="/appointment" 
-            className="hidden sm:inline-flex bg-primary text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all active:scale-95 whitespace-nowrap"
-          >
-            Book Appointment
-          </Link>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <a 
+              href="https://www.instagram.com/shalimar_dentalclinic_dubagga" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-2.5 text-primary hover:bg-primary/5 rounded-full transition-colors order-2 md:order-1"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-5 h-5 sm:w-6 sm:h-6" />
+            </a>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="md:hidden p-2 text-primary active:scale-90 transition-transform"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
-          >
+            <Link 
+              to="/appointment" 
+              className="hidden sm:inline-flex bg-primary text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all active:scale-95 whitespace-nowrap order-1 md:order-2"
+            >
+              Book Appointment
+            </Link>
+
+            {/* Mobile Menu Toggle */}
+            <button 
+              className="md:hidden p-2 text-primary active:scale-90 transition-transform order-3"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Toggle menu"
+            >
             {isMenuOpen ? (
               <X className="w-6 h-6" />
             ) : (
@@ -119,6 +130,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
+    </div>
 
       {/* Mobile Dropdown Menu */}
       <AnimatePresence>
@@ -156,7 +168,7 @@ const Navbar = () => {
                   }`}
                 >
                   {link.label}
-                  <ArrowRight className={`w-4 h-4 transition-transform ${location.pathname === link.to ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 subgroup-hover:opacity-100 group-hover:translate-x-0"}`} />
+                  <ArrowRight className={`w-4 h-4 transition-transform ${location.pathname === link.to ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"}`} />
                 </Link>
               ))}
             </div>
@@ -171,9 +183,8 @@ const Hero = () => (
   <section className="relative pt-32 lg:pt-40 pb-16 lg:pb-32 px-4 md:px-6 overflow-hidden">
     <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
       <motion.div 
-        initial={{ opacity: 0, x: -20 }}
+        initial={false}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6 }}
         className="w-full lg:w-1/2 z-10 text-center lg:text-left"
       >
         <h1 className="text-primary text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] font-bold font-headline leading-[1.1] tracking-tight mb-6">
@@ -208,19 +219,19 @@ const Hero = () => (
           <picture>
             <source 
               media="(max-width: 768px)" 
-              srcSet="main11.webp" 
+              srcSet="/main11.webp" 
             />
             <source 
               media="(min-width: 769px)" 
-              srcSet="main11.webp" 
+              srcSet="/main11.webp" 
             />
             <img 
               alt="Dr. Azim Ahmad - Chief Oral & Maxillofacial Surgeon at Shalimar Dental Clinic Lucknow" 
               className="w-full h-full object-cover" 
-              src="main1.webp"
+              src="/main11.webp"
               referrerPolicy="no-referrer"
-              width="600"
-              height="450"
+              width="665"
+              height="500"
               fetchPriority="high"
               loading="eager"
               decoding="sync"
@@ -228,14 +239,14 @@ const Hero = () => (
           </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
         </div>
-        <div className="absolute -bottom-6 sm:-bottom-16 -left-4 sm:-left-6 bg-white/95 backdrop-blur-md p-4 sm:p-6 rounded-2xl shadow-xl max-w-[240px] sm:max-w-xs z-20 border border-slate-100">
-          <div className="flex items-center gap-3 mb-2 sm:mb-3">
-            <div className="p-2 bg-secondary/10 rounded-lg">
-              <BadgeCheck className="text-secondary w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
-            <div className="font-black text-primary text-sm sm:text-base">Expert Care</div>
+        <div className="absolute -bottom-5 sm:bottom-6 left-4 sm:-left-6 bg-white/95 backdrop-blur-md py-2 sm:py-3 px-3 sm:px-4 rounded-xl sm:rounded-2xl shadow-xl max-w-[145px] sm:max-w-[220px] z-30 border border-slate-100 flex items-center gap-2 sm:gap-3 transition-all hover:scale-105">
+          <div className="flex-shrink-0 p-1.5 sm:p-2 bg-secondary/10 rounded-lg sm:rounded-xl">
+            <BadgeCheck className="text-secondary w-4 h-4 sm:w-5 sm:h-5" />
           </div>
-          <p className="text-xs sm:text-sm text-on-surface font-extrabold leading-tight">Advanced root canal and implants by our expert clinical team in Lucknow.</p>
+          <div>
+            <div className="font-black text-primary text-[10px] sm:text-sm leading-none mb-0.5 sm:mb-1">Expert Care</div>
+            <p className="text-[8px] sm:text-[11px] text-on-surface font-black leading-tight">Advanced clinical excellence.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -282,10 +293,10 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Care at Shalimar Dental Clinic Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
-              src="sub-main1.webp"
+              src="/sub-main1.webp"
               referrerPolicy="no-referrer"
-              width="400"
-              height="533"
+              width="320"
+              height="427"
               loading="lazy"
               decoding="async"
             />
@@ -295,10 +306,10 @@ const About = () => (
               whileHover={{ scale: 1.02 }}
               alt="Advanced Dental Tools for Painless Treatment in Lucknow" 
               className="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover bg-slate-100" 
-              src="sub-main.webp"
+              src="/sub-main.webp"
               referrerPolicy="no-referrer"
-              width="400"
-              height="533"
+              width="320"
+              height="427"
               loading="lazy"
               decoding="async"
             />
@@ -446,55 +457,29 @@ const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   
- const results = [
-  {
-    id: 1,
-    category: "Teeth Whitening",
-    before: "/whitening-before.webp",
-    after: "/whitening-after.webp",
-    desc: "Advanced laser teeth whitening treatment for a brighter and stain-free smile.",
-  },
-
-  {
-    id: 2,
-    category: "Orthodontics (Braces)",
-    before: "/braces--before.webp",
-    after: "/braces-after.webp",
-    desc: "Perfect dental alignment achieved with advanced braces treatment in Lucknow.",
-  },
-
-  {
-    id: 3,
-    category: "Smile Makeover",
-    before: "/smile-before.webp",
-    after: "/smile-after.webp",
-    desc: "Complete smile reconstruction using veneers and cosmetic dentistry.",
-  },
-
-  {
-    id: 4,
-    category: "Teeth Cleaning",
-    before: "/cleaning-before.webp",
-    after: "/cleaning-after.webp",
-    desc: "Professional dental cleaning and scaling treatment for healthier teeth and gums.",
-  },
-
-  {
-    id: 5,
-    category: "Dental Implants",
-    before: "/implant--before.webp",
-    after: "/implant--after.webp",
-    desc: "Permanent tooth replacement using premium-quality dental implants.",
-  },
-
-  {
-    id: 6,
-    category: "Root Canal (RCT)",
-    before: "/rct-before.webp",
-    after: "/rct-after.webp",
-    desc: "Painless root canal treatment to save damaged natural teeth.",
-  },
-];
+  const results = [
+    {
+      id: 1,
+      category: "Teeth Whitening",
+      before: "/whitening-before.webp",
+      after: "/whitening-after.webp",
+      desc: "Advanced laser teeth whitening treatment for a brighter and stain-free smile.",
+    },
+    {
+      id: 2,
+      category: "Orthodontics",
+      before: "/braces--before.webp",
+      after: "/braces-after.webp",
+      desc: "Perfect dental alignment achieved with advanced braces treatment in Lucknow.",
+    },
+    {
+      id: 3,
+      category: "Smile Makeover",
+      before: "/smile-before.webp",
+      after: "/smile-after.webp",
+      desc: "Complete smile reconstruction using veneers and cosmetic dentistry.",
+    }
+  ];
 
   const next = () => setCurrentIndex((prev) => (prev + 1) % results.length);
   const prev = () => setCurrentIndex((prev) => (prev - 1 + results.length) % results.length);
@@ -805,56 +790,56 @@ const Blog = () => {
       title: "Root canal cost in Lucknow", 
       excerpt: "Find out the average cost and benefits of root canal treatment in Lucknow.", 
       date: "May 10, 2024",
-      image: "cost1111.webp",
+      image: "/cost1111.webp",
       link: "/blog/root-canal-cost-lucknow"
     },
     { 
       title: "How to stop tooth pain", 
       excerpt: "Immediate steps you can take to manage toothache before seeing a dentist.", 
       date: "May 12, 2024",
-      image: "cost4.webp",
+      image: "/cost4.webp",
       link: "/blog/how-to-stop-tooth-pain-immediately"
     },
     { 
       title: "Dental implant cost in Lucknow", 
       excerpt: "Understanding the investment required for permanent tooth replacement.", 
       date: "May 14, 2024",
-      image: "cost3.webp",
+      image: "/cost3.webp",
       link: "/blog/dental-implant-vs-bridge"
     },
     { 
       title: "How to maintain oral hygiene", 
       excerpt: "Daily habits that will keep your smile bright and healthy for years.", 
       date: "May 16, 2024",
-      image: "cost8.webp",
+      image: "/cost8.webp",
       link: "/blog/benefits-of-teeth-cleaning"
     },
     { 
       title: "Tooth extraction aftercare", 
       excerpt: "Essential tips for a quick and painless recovery after a tooth removal.", 
       date: "May 18, 2024",
-      image: "cost77.webp",
+      image: "/cost77.webp",
       link: "/blog/wisdom-tooth-extraction-recovery"
     },
     { 
       title: "Braces treatment cost", 
       excerpt: "Comparing different types of braces and their costs in the local area.", 
       date: "May 20, 2024",
-      image: "cost6.webp",
+      image: "/cost6.webp",
       link: "/blog/types-of-braces-cost-lucknow"
     },
     { 
       title: "Best dentist in Lucknow", 
       excerpt: "What to look for when choosing the right dental professional for your family.", 
       date: "May 22, 2024",
-      image: "cost5.webp",
+      image: "/cost5.webp",
       link: "/blog/how-to-choose-best-dentist"
     },
     { 
       title: "Child's first dental visit", 
       excerpt: "Expert guidance for your child's first step towards oral health.", 
       date: "May 24, 2024",
-      image: "main1.webp",
+      image: "/main11.webp",
       link: "/blog/child-first-dental-visit"
     }
   ];
@@ -1030,15 +1015,17 @@ const MobileNav = () => {
       </div>
  
       <a 
-        href="https://www.instagram.com/shalimar_dentalclinic_dubagga?igsh=em0ybnlhemh1d3Rs" 
+        href="https://wa.me/919598112677" 
         target="_blank"
         rel="noopener noreferrer"
-        className={`flex-1 min-h-[48px] flex flex-col items-center justify-center gap-1.5 transition-all active:scale-90 text-black hover:text-primary`}
+        className={`flex-1 min-h-[48px] flex flex-col items-center justify-center gap-1.5 transition-all active:scale-90 text-[#25D366] hover:text-[#128C7E]`}
       >
-        <div className={`p-3 rounded-2xl transition-colors`}>
-          <Instagram className="w-7 h-7" />
+        <div className={`p-2 rounded-2xl transition-colors`}>
+          <svg className="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+          </svg>
         </div>
-        <span className="text-[11px] font-black uppercase tracking-[0.1em]">Insta</span>
+        <span className="text-[11px] font-black uppercase tracking-[0.1em]">WhatsApp</span>
       </a>
     </nav>
   );
@@ -1046,7 +1033,7 @@ const MobileNav = () => {
 
 const WhatsAppButton = () => (
   <a 
-    className="fixed bottom-28 md:bottom-8 right-6 md:right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl border-4 border-white/20 transition-transform hover:scale-110 active:scale-95"
+    className="hidden md:flex fixed bottom-8 right-8 z-[60] w-16 h-16 bg-[#25D366] text-white rounded-full items-center justify-center shadow-2xl border-4 border-white/20 transition-transform hover:scale-110 active:scale-95"
     href="https://wa.me/919598112677?text=Hello%2C%20I%20would%20like%20to%20book%20a%20dental%20appointment.%20Please%20let%20me%20know%20your%20available%20time%20slots.%20Thank%20you."
     target="_blank"
     rel="noopener noreferrer"
